@@ -1,16 +1,16 @@
 {
   "name": "the-red-button",
+  "homepage": "https://charles7458.github.io/The-Red-Button/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://charles7458.github.io/The-Red-Button/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build" 
+    "deploy": "gh-pages -d dist" 
   },
   "dependencies": {
     "react": "^19.0.0",
