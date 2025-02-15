@@ -9,7 +9,12 @@ import GreenBtn from './GreenBtn';
 export default function  RedButton() {
 
     let [count, setCount] = useState(0);
-    let sound = new Audio('src/assets/button.mp3'); 
+    let sound = new Audio("src/assets/button.mp3"); 
+    // let presses = document.getElementById("presses");
+
+    // while (count < 11){
+    //     presses.style.display="none";
+    // }
     
     let update = () => {
         sound.play();
@@ -23,7 +28,7 @@ export default function  RedButton() {
         <img src={redButton} id='red-button' onClick={update}></img>
         
         <h1 id='down'>Yes, Don't press the button  :)</h1>
-        {/* <h1>Count: {count}</h1> */}
+        {/* <h1 id='presses'>Count: {count}</h1> */}
 
         <GreenBtn  counts = {count}/>
         </>

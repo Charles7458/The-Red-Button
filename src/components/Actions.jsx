@@ -18,7 +18,9 @@ export default function Actions(count) {
         "Did you know? That each time you press this button." : "An old lady you don't know will die!!!",
         "You will still press the button?": "?You don't care about the old lady?",
         "Fine!" : "Since you're so persistent on clicking it..",
-        "Why? Click the Green one, it even has a counter, right?" : ""
+        "Why? Click the Green one, it even has a counter, right?" : "",
+        "You really want to click this?": `You have clicked this button ${count} times.`,
+        "Ok then continue clicking, I won't stop you.": ""
     }
 
     
@@ -30,9 +32,15 @@ export default function Actions(count) {
     up.textContent = uContent[count];
     down.textContent = dContent[count];
 
-    if (count == 9 || count == 10) {
-        redBtn.style.width="30px"
+    if (count == 9 ) {
+        redBtn.style.width="30px";
+    }
+    if (count > 10) {
+        redBtn.style.width="100px";
     }
 
+    if (count > 11) {
+        up.textContent = uContent[10];
+    }
 }
 
