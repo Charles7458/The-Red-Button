@@ -6,11 +6,12 @@ export default function Actions(count) {
     const up = document.querySelector("#up");
     const down = document.querySelector("#down");
     const redBtn = document.querySelector("#red-button")
+    let presses = document.getElementById("presses");
 
     const dialogue = {
         "DO NOT PRESS!!!" : "Yes, Don't press the button  :)",
         "!" : "What happened??",
-        "You pressed the button!" : "Didn't you",
+        "You pressed the button!" : "Didn't you?",
         "DO NOT PRESS! THIS RED BUTTON" : "",
         "???" : "HEY! Can't you read?",
         "Please Stop." : "",
@@ -39,8 +40,10 @@ export default function Actions(count) {
         redBtn.style.width="100px";
     }
 
-    if (count > 11) {
-        up.textContent = uContent[10];
+    if (count >= 12) {
+        up.textContent = uContent[12];
     }
+
+    
 }
 
