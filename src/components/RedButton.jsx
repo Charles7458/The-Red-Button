@@ -11,8 +11,10 @@ export default function  RedButton() {
     let [count, setCount] = useState(0);
     const sound = new Audio('./assets/button.mp3'); 
     
-
-
+    const presses = document.querySelector("#presses")
+    if (count>11) {
+        presses.style.display = "block"
+    }
     
     let update = () => {
         sound.play();
@@ -28,7 +30,7 @@ export default function  RedButton() {
         
         <h1 id='down'>Yes, Don't press the button  :)</h1>
         
-        <h1 id='presses'>Count: {count}</h1>
+        <h1 id='presses' style={{display:"none"}}>Count: {count}</h1>
 
         <GreenBtn  counts = {count}/>
         </>
